@@ -10,7 +10,7 @@ from textblob import TextBlob, Word, Blobber
 import pandas as pd
 import re
 
-data = pd.read_csv("/content/gdrive/My Drive/itw practicals/ua.csv")
+data = pd.read_csv("tweets.csv")
 Rev_tweet=data["text"]
 Rev_tweet
 
@@ -68,10 +68,10 @@ len(dataset_words)
 len(set(dataset_words))
 
 #Divide the dataset into two Train data and Test data. Trigram Probabilities are learnt on the Train data and to evaluate it, we use the Test data.
-#Out of 926 sentences, 800 sentences are used for training.
+#Out of 10000 sentences, 8000 sentences are used for training.
 
-data_sents = dataset_sent[:800]
-data_sents_test = dataset_sent[800:]
+data_sents = dataset_sent[:8000]
+data_sents_test = dataset_sent[8000:]
 
 # number of words in train data
 num_words = 0
